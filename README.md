@@ -1,4 +1,4 @@
-![Nonlinear PCA](http://www.nlpca.org/fig_nlpca_nonlinear_PCA_autoencoder_3d_small.png "Nonlinear PCA")
+*I've added the referenced materials below*
 
 # Nonlinear PCA toolbox for Matlab #
 
@@ -22,30 +22,7 @@ data_reconstruction = nlpca_get_data(net, pc)
 
 `net` can be used in `nlpca_get_components` and `nlpca_get_data` to obtain component values (scores) for new data or reconstructed data for any component value. 
 
-### Example ###
 
-In this example nonlinear PCA (circular PCA) is applied to artificial data of a noisy circle.
-
-```
-#!python
-% generate circular data
-t=linspace(-pi , +pi , 100);  % angular value t=-pi,...,+pi
-data = [sin(t);cos(t)];       % circle
-data = data + 0.2*randn(size(data));    % add noise
-
-% nonlinear PCA (circular PCA, inverse network architecture)
-[pc,net]=nlpca(data, 1,  'type','inverse',  'circular','yes' );
-              
-% plot components
-nlpca_plot(net)
-```
-
-### Demos ###
-
-* `demo_hierarchical_NLPCA_StarData.m` demo of hierarchical nonlinear PCA
-* `demo_circular_PCA.m` 	demo of circular units (Circular PCA)
-* `demo_inverse_NLPCA.m` 	demo of inverse network architecture
-* `demo_missing_data.m` 	demo of missing data estimation
 
 
 ### Download ###
