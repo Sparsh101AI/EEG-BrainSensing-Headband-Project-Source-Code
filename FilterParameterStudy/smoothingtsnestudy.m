@@ -6,3 +6,4 @@ for itr = 3:2:21
 		[tsneoutput(:,:,counter), error(counter)] = tsne(pxx');
 		counter = counter + 1;
 end
+.end
